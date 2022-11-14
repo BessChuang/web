@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Ropa+Sans:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Ropa+Sans:ital@0;1&display=swap');
+
+.navbar-brand,
+#header h1,
+.container h1 {
+    font-family: 'Anton', sans-serif;
+    font-family: 'Ropa Sans', sans-serif;
+    font-size: 42px;
+}
+
+#header p,
+.intro-box h3,
+.container h5 {
+    font-family: 'Anton', sans-serif;
+    font-family: 'Ropa Sans', sans-serif;
+    font-size: 20px;
+}
+
+/* Navbar */
+
+.navbar {
+    box-shadow: 0 3px 18px rgba(0, 0, 0, .11);
+}
+
+/* 選到.carousel-indicators具有data-bs-target屬性的標籤  */
+/* indicators樣式替換 */
+.carousel-indicators [data-bs-target] {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+
+/* Header */
+/* js，加上漸變 */
+#header,
+#header .container {
+transition: all .5s ease;
+}
+
+#header.scroll {
+    filter: grayscale(100%);
+}
+
+#header.scroll .container {
+    filter: grayscale(0%);
+    transform: scale(.5);
+}
+
+/* css樣式 */
+#header {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    /* padding: 200px 0px; */
+    text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.3);
+    /* ok TODO: 加入背景圖片 */
+    background-image: url("../img/header-image.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+#header h1 {
+    font-size: 42px;
+}
+
+/* IntroSection */
+
+.intro-box,
+.intro-line,
+.intro-box .icon {
+    transition: all .3s ease;
+}
+
+.intro-box {
+    margin-bottom: 15px;
+    padding: 15px 15px;
+    text-align: center;
+    position: relative;
+    bottom: 0px;
+}
+
+.intro-box:hover {
+    background: white;
+    box-shadow: 0px 12px 60px rgba(112, 84, 99, 0.25), 0px 0px 0px 3px rgba(112, 84, 99, 0.25);
+    bottom: 7px;
+}
+
+.intro-line {
+    width: 20px;
+    height: 6px;
+    border-radius: 3px;
+    margin: 10px auto;
+}
+
+.intro-box:hover .intro-line {
+    width: 45px;
+}
+
+.intro-box .icon {
+    transform: scale(.8);
+}
+
+.intro-box:hover .icon {
+    transform: scale(1);
+}
+
+/* gallerySection */
+
+.gallery-block,
+.gallery-text {
+    transition: all .5s ease-out;
+}
+
+.gallery-block {
+    background-size: cover;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: grayscale(100%);
+}
+
+.gallery-text {
+    color: white;
+    font-weight: 700;
+    text-shadow: 0 8px 10px rgba(0, 0, 0, .5);
+    text-align: center;
+    transform: scale(.7) rotate(-135deg);
+    opacity: 0;
+}
+
+.gallery-block:hover {
+    filter: grayscale(0%);
+}
+
+.gallery-block:hover .gallery-text {
+    transform: scale(2.4);
+    opacity: 1;
+}
+
+/* 放入背景圖片 */
+/* 不會佔據空間 */
+
+#galleryImage1 {
+    background-image: url('../img/gallery-image-1.jpg');
+}
+
+#galleryImage2 {
+    background-image: url('../img/gallery-image-2.jpg');
+}
+
+#galleryImage3 {
+    background-image: url('../img/gallery-image-3.jpg');
+}
+
+#galleryImage4 {
+    background-image: url('../img/gallery-image-4.jpg');
+}
+
+#galleryImage5 {
+    background-image: url('../img/gallery-image-5.jpg');
+}
+
+#galleryImage6 {
+    background-image: url('../img/gallery-image-6.jpg');
+}
+
+#galleryImage7 {
+    background-image: url('../img/gallery-image-7.jpg');
+}
+
+#galleryImage8 {
+    background-image: url('../img/gallery-image-8.jpg');
+}
+
+/* Footer */
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-end p {
+    font-size: 8px;
+    margin: 0;
+}
+
+/* side-box */
+
+.side-box {
+    width: 300px;
+    position: fixed;
+    right: -275px;
+    bottom: 80px;
+    z-index: 100;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    display: flex;
+    box-shadow: 0px 20px 15px rgba(0, 0, 0, 0.2);
+    transition: all .3s ease;
+}
+
+.side-box.active {
+    right: 0px;
+}
+
+.left-part {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-right: 1px solid #ddd;
+}
+
+.ad-toggle-btn {
+    width: 25px;
+    border: none;
+    background-color: transparent;
+    color: #333;
+    cursor: pointer;
+}
+
+.ad-toggle-btn>i {
+    transform: rotateZ(90deg);
+}
+
+.ad-toggle-btn:hover {
+    color: #666;
+}
+
+.right-part {
+    padding: 10px;
+}
+
+.right-part>p {
+    margin-bottom: 0;
+}
